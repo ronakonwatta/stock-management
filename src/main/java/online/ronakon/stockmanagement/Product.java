@@ -8,32 +8,27 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "PRODUCT")
-@DynamicInsert
-@DynamicUpdate
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long entityId;
 
+    @Column(name = "NAME")
     private String name;
 
+    @Column(name = "PRICE")
     private double price;
 
     public Product() {
     }
 
-    public Product(long id, String name, double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
+    public Long getEntityId() {
+        return entityId;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public void setEntityId(Long entityId) {
+        this.entityId = entityId;
     }
 
     public String getName() {
