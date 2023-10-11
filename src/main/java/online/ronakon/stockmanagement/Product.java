@@ -21,134 +21,51 @@ public class Product implements Serializable {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long entityId;
+    public Long entityId;
 
-    @Column(name = "NAME")
-    private String name;
+    @Column(name ="PRODUCT_CODE", nullable = false, unique = true)
+    public String productCode;
+
+
+    @Column(name = "PRODUCT_NAME")
+    public String productName;
 
     @Column(name = "PRICE")
-    private double price;
+    public double price;
 
     //region System Stamp
     @Column(name = "VERSION", nullable = false)
     @Version
-    private Integer version;
+    public Integer version;
 
     @CreatedBy
     @Column(name = "CREATED_BY")
-    private String createdBy;
+    public String createdBy;
 
     @CreatedDate
     @Column(name = "CREATED_DATE")
     @CreationTimestamp
-    private Date createdDate;
+    public Date createdDate;
 
     @LastModifiedBy
     @Column(name = "LAST_MODIFIED_BY")
-    private String lastModifiedBy;
+    public String lastModifiedBy;
 
     @LastModifiedDate
     @Column(name = "LAST_MODIFIED_DATE")
     @UpdateTimestamp
-    private Date lastModifiedDate;
+    public Date lastModifiedDate;
 
     @Column(name = "DELETED_DATE")
-    private Date deletedDate;
+    public Date deletedDate;
 
     @Column(name = "DELETED_BY")
-    private String deleteBy;
+    public String deleteBy;
 
     @Column(name = "IS_DELETED")
-    private Boolean isDeleted = Boolean.FALSE;
+    public Boolean isDeleted = Boolean.FALSE;
 
     public Product() {
     }
 
-    public Long getEntityId() {
-        return entityId;
-    }
-
-    public void setEntityId(Long entityId) {
-        this.entityId = entityId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
-    public Date getDeletedDate() {
-        return deletedDate;
-    }
-
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
-    }
-
-    public String getDeleteBy() {
-        return deleteBy;
-    }
-
-    public void setDeleteBy(String deleteBy) {
-        this.deleteBy = deleteBy;
-    }
-
-    public Boolean getDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(Boolean deleted) {
-        isDeleted = deleted;
-    }
 }
