@@ -24,8 +24,9 @@ public class ProductController {
     }
 
     @PostMapping("/add")
-    ResponseEntity<Product> addProduct(@RequestBody Product product) {
-        return ResponseEntity.status(201).body(productRepository.save(product));
+    ResponseEntity<Void> addProduct(@RequestBody Product product) {
+        Product _product = productRepository.save(product);
+        return entityWithLocation(_product.getEntityId());
     }
 
     @PostMapping("/add-all")
@@ -58,13 +59,6 @@ public class ProductController {
      * new resource will be http://localhost:8080/accounts/1111.
      */
     private ResponseEntity<Void> entityWithLocation(Object resourceId) {
-
-        // TODO-07: Set the 'location' header on a Response to URI of
-        // the newly created resource and return it.
-        // a. You will need to use 'ServletUriComponentsBuilder' and
-        // 'ResponseEntity' to implement this - Use ResponseEntity.created(..)
-        // b. Refer to the POST example in the slides for more information
-
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(resourceId).toUri();
         return ResponseEntity.created(uri).build(); // Return something other than null
     }
