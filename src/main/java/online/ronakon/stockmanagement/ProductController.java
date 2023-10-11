@@ -1,5 +1,7 @@
 package online.ronakon.stockmanagement;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/product/")
 public class ProductController {
-
+    private final Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
     ProductRepository productRepository;
 
@@ -61,5 +63,12 @@ public class ProductController {
     private ResponseEntity<Void> entityWithLocation(Object resourceId) {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(resourceId).toUri();
         return ResponseEntity.created(uri).build(); // Return something other than null
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler({ IllegalArgumentException.class })
+    public void handleNotFound(Exception ex) {
+        logger.error("Exception is: ", ex);
+        // just return empty 404
     }
 }
