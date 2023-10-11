@@ -29,17 +29,17 @@ public class ProductService {
             repository.save(_oldProduct);
         }
     }
-//
-//    void delete(Product product) {
-//        Product _oldProduct = repository.findByProductCode(product.productCode);
-//        if (_oldProduct == null)
-//            return;
-//        if (_oldProduct != null) {
-//            _oldProduct.deletedDate = new Date();
-//            _oldProduct.isDeleted = Boolean.TRUE;
-//            repository.save(_oldProduct);
-//        }
-//    }
+
+    void delete(String productCode) {
+        Product _oldProduct = repository.findByProductCode(productCode);
+        if (_oldProduct == null)
+            return;
+        if (_oldProduct != null) {
+            _oldProduct.deletedDate = new Date();
+            _oldProduct.isDeleted = Boolean.TRUE;
+            repository.save(_oldProduct);
+        }
+    }
 
     List<Product> findAll() {
         return repository.findAll();
