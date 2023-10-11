@@ -5,79 +5,69 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.function.EntityResponse;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.LinkedList;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/api/product/")
 public class ProductController {
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+
     @Autowired
-    ProductRepository productRepository;
+    ProductService productService;
+
+    public ProductController() {
+    }
 
     @GetMapping("/all")
-    ResponseEntity<List<Product>> getAllProduct() {
-        return ResponseEntity.ok((List<Product>) productRepository.findAll());
+    List<Product> getAllProduct() {
+        return productService.findAll();
+    }
+
+    @GetMapping("/")
+    ResponseEntity<List<Product>>  getAll() {
+        var a =  productService.findAll();
+        return ResponseEntity.status(HttpStatus.CREATED).body(a);
     }
 
     @PostMapping("/add")
-    ResponseEntity<Void> addProduct(@RequestBody Product product) {
-        Product _product = null;
-        Product _oldProduct = productRepository.findByNameEquals(product.getName());
-
-        if (_oldProduct != null) {
-            _oldProduct.setPrice(product.getPrice());
-            _product = productRepository.save(_oldProduct);
-        } else {
-             _product = productRepository.save(product);
-        }
-
-        return entityWithLocation(_product.getEntityId());
+    ResponseEntity<String> addProduct(@RequestBody Product product) {
+        productService.save(product);
+        return ResponseEntity.status(HttpStatus.CREATED).body("");
     }
-
-    @PostMapping("/add-all")
-    ResponseEntity<Iterable<Product>> addProduct(@RequestBody List<Product> productList) {
-        Iterable<Product> iterableProductList = productList;
-        return ResponseEntity.status(201).body(productRepository.saveAll(iterableProductList));
-    }
-
-    @PutMapping("/{id}")
-    void putProduct(@PathVariable("id") String id, @RequestBody Product product) {
-        productRepository.save(product);
-    }
-
-    @PatchMapping("/{id}")
-    void patchProduct(@PathVariable("id") String id, @RequestBody Product product) {
-        productRepository.save(product);
-    }
-
-    @DeleteMapping("/{id}")
-    ResponseEntity deleteProduct(@PathVariable("id") String id) {
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("id remove" + id);
-    }
-
-
-    /**
-     * Return a response with the location of the new resource.
-     * <p>
-     * Suppose we have just received an incoming URL of, say,
-     * http://localhost:8080/accounts and resourceId is "1111". Then the URL of the
-     * new resource will be http://localhost:8080/accounts/1111.
-     */
-    private ResponseEntity<Void> entityWithLocation(Object resourceId) {
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(resourceId).toUri();
-        return ResponseEntity.created(uri).build(); // Return something other than null
-    }
-
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler({IllegalArgumentException.class})
-    public void handleNotFound(Exception ex) {
-        logger.error("Exception is: ", ex);
-        // just return empty 404
-    }
+//
+//    @PostMapping("/add-all")
+//    ResponseEntity<Void> addProduct(@RequestBody List<Product> productList) {
+//        for(Product _elem : productList){
+////            productService.save(_elem);
+//        }
+//        return ResponseEntity.status(201).body(null);
+//    }
+//
+//    @PutMapping("/{id}")
+//    ResponseEntity<Object> putProduct(@PathVariable("id") String id, @RequestBody Product product) {
+////        productService.save(product);
+//        return ResponseEntity.status(204).body(null);
+//    }
+//
+//    @PatchMapping("/{id}")
+//    ResponseEntity<Object>  patchProduct(@PathVariable("id") String id, @RequestBody Product product) {
+////        productService.save(product);
+//        return ResponseEntity.status(204).body(null);
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    ResponseEntity deleteProduct(@PathVariable("id") String id) {
+//        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("id remove" + id);
+//    }
+//
+//    @ResponseStatus(HttpStatus.NOT_FOUND)
+//    @ExceptionHandler({IllegalArgumentException.class})
+//    public void handleNotFound(Exception ex) {
+//        logger.error("Exception is: ", ex);
+//        // just return empty 404
+//    }
 }
