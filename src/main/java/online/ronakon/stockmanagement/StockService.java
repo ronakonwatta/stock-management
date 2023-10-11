@@ -28,6 +28,8 @@ public class StockService {
     }
 
     List<Stock> findAllLastest(){
+
+        // TODO find product that have lastest then distish company and productCode
         return stockRepository.findStocksByOrderByCreateTime();
     }
 
