@@ -27,10 +27,10 @@ public class StockService {
         return stockRepository.findAll();
     }
 
-    List<Stock> findAllLastest(){
 
-        // TODO find product that have lastest then distish company and productCode
-        return stockRepository.findStocksByOrderByCreateTime();
+    List<Stock> findStockByCompanyCode(String companyCode){
+        return stockRepository.findByCompanyOrderByCreateTimeDesc(companyCode);
+        // TODO RETURN ONLY RECORD LATEST DISTINCT BY PRODUCT_CODE
     }
 
 }

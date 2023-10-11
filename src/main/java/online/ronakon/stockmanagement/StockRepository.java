@@ -7,7 +7,5 @@ import java.util.List;
 
 @Repository
 public interface StockRepository extends ListCrudRepository<Stock, Long> {
-    List<Stock> findStocksByOrderByCreateTime();
-
-    List<Stock> findDistinctTopByProductCode();
+    List<Stock> findByCompanyOrderByCreateTimeDesc(String companyCode);
 }

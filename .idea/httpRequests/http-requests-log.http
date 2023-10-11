@@ -1,3 +1,93 @@
+GET http://localhost:8080/api/stock/stock-in-company/MYCOM
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T011218.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 255
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "1212"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 254
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
 GET http://localhost:8080/api/stock/all-lastest
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
@@ -644,62 +734,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-10-11T155111.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
 
 ###
 
