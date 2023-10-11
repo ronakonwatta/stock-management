@@ -27,7 +27,16 @@ public class ProductController {
 
     @PostMapping("/add")
     ResponseEntity<Void> addProduct(@RequestBody Product product) {
-        Product _product = productRepository.save(product);
+        Product _product = null;
+        Product _oldProduct = productRepository.findByNameEquals(product.getName());
+
+        if (_oldProduct != null) {
+            _oldProduct.setPrice(product.getPrice());
+            _product = productRepository.save(_oldProduct);
+        } else {
+             _product = productRepository.save(product);
+        }
+
         return entityWithLocation(_product.getEntityId());
     }
 
@@ -49,13 +58,13 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     ResponseEntity deleteProduct(@PathVariable("id") String id) {
-        return  ResponseEntity.status(HttpStatus.NO_CONTENT).body("id remove" + id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("id remove" + id);
     }
 
 
     /**
      * Return a response with the location of the new resource.
-     *
+     * <p>
      * Suppose we have just received an incoming URL of, say,
      * http://localhost:8080/accounts and resourceId is "1111". Then the URL of the
      * new resource will be http://localhost:8080/accounts/1111.
@@ -66,7 +75,7 @@ public class ProductController {
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler({ IllegalArgumentException.class })
+    @ExceptionHandler({IllegalArgumentException.class})
     public void handleNotFound(Exception ex) {
         logger.error("Exception is: ", ex);
         // just return empty 404
