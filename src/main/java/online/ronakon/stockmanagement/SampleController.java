@@ -38,7 +38,8 @@ public class SampleController {
                 double p = rs.getDouble("price");
 //                double a = s.toCharArray();
 //                var r = new Product(w, a[0], p);
-                var r = new Product(w,s,p);
+//                var r = new Product(w,s,p);
+                var r = "FAKE";
                 result.add(r);
             }
             // 5. Close all resources
