@@ -1,3 +1,576 @@
+GET http://localhost:8080/api/stock/stock-in-company/MYCOM
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T013349.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 255
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "1112"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 254
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "112"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/stock-in-company/MYCOM
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T013248.500.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 254
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "112"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/stock-in-company/MYCOM
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T013030.500.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 255
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "1212"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/stock-in-company/MYCOM
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T011218.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 255
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "1212"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 254
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/all-lastest
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T004758.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/all-lastest
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T004750.200.json
+
+###
+
+GET http://localhost:8080/api/stock/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T004009.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "12"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "121"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "123"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T003856.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "company": "MYCOM",
+  "productCode": "PC01",
+  "quantity": "12"
+}
+
+###
+
+POST http://localhost:8080/api/stock/add
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "company": "MYCOM",
+  "productCode": "PC01",
+  "quantity": "12"
+}
+
+###
+
+POST http://localhost:8080/api/stock/add
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "company": "MYCOM",
+  "productCode": "PC01",
+  "quantity": "12"
+}
+
+###
+
+POST http://localhost:8080/api/stock/add
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "company": "MYCOM",
+  "productCode": "PC01",
+  "quantity": "12"
+}
+
+###
+
+GET http://localhost:8080/api/stock/all
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T003819.200.json
+
+###
+
 GET http://localhost:8080/api/product/all
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
@@ -277,354 +850,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-10-11T194125.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 51
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 1,
-  "name": "ETHANOL",
-  "price": 20.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T193723.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 51
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 1,
-  "name": "ETHANOL",
-  "price": 20.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T193717.200.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155457.200.json
-
-###
-
-PUT http://localhost:8080/api/product/sn0001
-Content-Type: application/json
-Content-Length: 52
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "NAIL CLIPPER (PINK)",
-  "price": 40.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155438.200.json
-
-###
-
-PUT http://localhost:8080/api/product/sn0001
-Content-Type: application/json
-Content-Length: 52
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "NAIL CLIPPER (PINK)",
-  "price": 40.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 64
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id" : "sn0001",
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155325.200.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155111.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155101.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T155047.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-<> 2023-10-11T154955.500.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T154953.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-<> 2023-10-11T154951.500.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T154858.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-###
-
-POST http://localhost:8080/api/product
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-<> 2023-10-11T154758.404.json
-
-###
-
-POST http://localhost:8080/api/product
-Content-Type: application/json
-Content-Length: 45
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "nail clipper",
-  "price": 50.0
-}
-
-<> 2023-10-11T154721.404.json
-
-###
-
-POST http://localhost:8080/api/product
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T154621.404.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T154553.200.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T153939.200.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T153933.200.json
 
 ###
 
