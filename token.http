@@ -13,14 +13,13 @@
 
 # curl -X POST -u user:password http://localhost:8080/token
 POST http://localhost:8080/token
-Authorization: Basic user password
+Authorization: Basic {{username}} {{password}}
 
 ###
 
 
 # curl -X GET http://localhost:8080/ -H "Authorization: Bearer $token
 GET http://localhost:8080/
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidXNlciIsImV4cCI6MTY5NzY0MjY0NywiaWF0IjoxNjk3NjA2NjQ3LCJzY29wZSI6ImFwcCJ9.kg-1VouVpHCRLK6NiXDAZxG7gp_-bozHbk1BKk1TNdxhjDhaNOSP4xc4Aq3gVsT9UtAARxFlLBxgWapFqQNIinvEgydmtH_Hoix_lj4VE1_HjFlXlFcVLlmMaaBMmrxcjLCQJIewRcIgnk32uu4cna-6sLHnvLU3xIzk3ys4-QyOv6AvAviS6u8OA6j51bSxgz00ww6wRnNqIWHADmte6iUCtiPX3vs6ORp_0fLGdjkz1mJ7yj3g5mNh2Gl2iMqEGKn3gudiAwXK2gyCie6lhd9fyL5eixGfWL7zIr70ttprj5WU5_lkaaGUE7iZDvBcvzgie_t7TN89cWWqxEIGzQ
-
+Authorization: Bearer {{jwt-token}}
 ###
 
