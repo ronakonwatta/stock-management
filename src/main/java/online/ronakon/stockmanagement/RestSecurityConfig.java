@@ -16,8 +16,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Deprecated
-@Configuration
-@EnableMethodSecurity
+//@Configuration
+//@EnableMethodSecurity
 public class RestSecurityConfig {
 //    @Bean
 //    SecurityFilterChain web(HttpSecurity http) throws Exception {
@@ -50,7 +50,7 @@ public class RestSecurityConfig {
 //        return http.build();
 //    }
 
-    @Bean
+//    @Bean
     public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
         UserDetails user = User.withUsername("user").password(passwordEncoder.encode("user")).roles("USER").build();
         UserDetails admin = User.withUsername("admin").password(passwordEncoder.encode("admin")).roles("USER", "ADMIN").build();
@@ -59,7 +59,7 @@ public class RestSecurityConfig {
         return new InMemoryUserDetailsManager(user, admin, superadmin);
     }
 
-    @Bean
+//    @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
