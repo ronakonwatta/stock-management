@@ -1,0 +1,4 @@
+# curl -X GET http://localhost:8080/api/product/all -H "Authorization: Bearer $token
+GET http://localhost:8080/api/product/all
+Authorization: Bearer {{jwt-token}}
+###
