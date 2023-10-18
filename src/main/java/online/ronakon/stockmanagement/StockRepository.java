@@ -9,4 +9,6 @@ import java.util.TreeSet;
 @Repository
 public interface StockRepository extends ListCrudRepository<Stock, Long> {
     List<Stock> findByCompanyOrderByCreateTimeDesc (String companyCode);
+//    List<Stock> findDistinctFirstByCompanyAndProductCodeOrderByCreateTimeDesc(String companyCode);
+    // TODO FIND FIRST OR FIND ONE. is JPA FUNCTION
 }

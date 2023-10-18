@@ -22,6 +22,7 @@ public class StockService {
         for (Stock stock : stockList) {
             stockRepository.save(stock);
         }
+        // TODO REPLACE TO SAVEALL
     }
 
     List<Stock> findAll(){
@@ -30,8 +31,11 @@ public class StockService {
 
 
     List<Stock> findStockByCompanyCode(String companyCode){
-        return stockRepository.findByCompanyOrderByCreateTimeDesc(companyCode);
+//        return stockRepository.findByCompanyOrderByCreateTimeDesc(companyCode);
+//        return stockRepository.findDistinctFirstByCompanyAndProductCodeOrderByCreateTimeDesc(companyCode);
         // TODO RETURN ONLY RECORD LATEST DISTINCT BY PRODUCT_CODE
+        return null;
     }
+
 
 }

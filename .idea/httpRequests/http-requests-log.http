@@ -1,3 +1,63 @@
+GET http://localhost:8080/api/stock/stock-in-company/242
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T160927.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 240
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+[
+  {
+    "company": "242",
+    "productCode": "P001",
+    "quantity": "101"
+  },
+  {
+    "company": "243",
+    "productCode": "P002",
+    "quantity": "10"
+  },
+  {
+    "company": "242",
+    "productCode": "P001",
+    "quantity": "30"
+  }
+]
+
+###
+
+GET http://localhost:8080/api/stock/stock-in-company/242
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T160822.200.json
+
+###
+
+POST http://localhost:8080/api/stock/add
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "company": "242",
+  "productCode": "P001",
+  "quantity": "10ß"
+}
+
+###
+
 GET http://localhost:8080/api/stock/stock-in-company/MYCOM
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
@@ -784,72 +844,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-10-11T194910.200.json
-
-###
-
-POST http://localhost:8080/api/product/add-all
-Content-Type: application/json
-Content-Length: 130
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-[
-  {
-    "id": 1,
-    "name": "ETHANOL",
-    "price": 20.0
-  },
-  {
-    "id": 2,
-    "name": "AETHANOL",
-    "price": 120.0
-  }
-]
-
-<> 2023-10-11T194156.201.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T194144.200.json
-
-###
-
-POST http://localhost:8080/api/product/add-all
-Content-Type: application/json
-Content-Length: 130
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-[
-  {
-    "id": 1,
-    "name": "ETHANOL",
-    "price": 20.0
-  },
-  {
-    "id": 2,
-    "name": "AETHANOL",
-    "price": 120.0
-  }
-]
-
-<> 2023-10-11T194136.201.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T194125.200.json
 
 ###
 

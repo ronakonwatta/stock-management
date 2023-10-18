@@ -3,12 +3,13 @@ package online.ronakon.stockmanagement;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.DriverManager;
 import java.util.Date;
 import java.util.LinkedList;
 
-@Controller
+@RestController
 public class SampleController {
 
     @RequestMapping("/sample")
