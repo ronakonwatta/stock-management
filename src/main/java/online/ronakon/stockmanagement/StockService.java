@@ -19,10 +19,7 @@ public class StockService {
     }
 
     void saveList(List<Stock> stockList) {
-        for (Stock stock : stockList) {
-            stockRepository.save(stock);
-        }
-        // TODO REPLACE TO SAVEALL
+        stockRepository.saveAll(stockList);
     }
 
     List<Stock> findAll(){
