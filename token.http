@@ -1,0 +1,9 @@
+# curl --location 'http://localhost:8080/token'
+#--header 'username: username'
+#--header 'password: password'
+GET http://localhost:8080/token
+username: username
+password: password
+
+###
+

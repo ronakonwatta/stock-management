@@ -1,3 +1,28 @@
+GET http://localhost:8080/token
+username: username
+password: password
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/token
+username: username
+password: password
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
 GET http://localhost:8080/api/stock/stock-in-company/242
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
@@ -796,54 +821,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-10-11T194928.200.json
-
-###
-
-POST http://localhost:8080/api/product/add
-Content-Type: application/json
-Content-Length: 51
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 1,
-  "name": "ETHANOL",
-  "price": 20.0
-}
-
-###
-
-POST http://localhost:8080/api/product/add-all
-Content-Type: application/json
-Content-Length: 130
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-[
-  {
-    "id": 1,
-    "name": "ETHANOL",
-    "price": 20.0
-  },
-  {
-    "id": 2,
-    "name": "AETHANOL",
-    "price": 120.0
-  }
-]
-
-<> 2023-10-11T194912.201.json
-
-###
-
-GET http://localhost:8080/api/product/all
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-11T194910.200.json
 
 ###
 
