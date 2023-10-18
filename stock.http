@@ -1,0 +1,32 @@
+###
+
+POST http://localhost:8080/api/stock/add-list
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+Authorization: Bearer {{jwt-token}}
+
+[
+  {
+    "company": "MYCOM",
+    "productCode": "PC01",
+    "quantity": "122"
+  },
+  {
+    "company": "MYCOMAA",
+    "productCode": "PC011",
+    "quantity": "1212"
+  },
+  {
+    "company": "MYCOMBB",
+    "productCode": "PC012",
+    "quantity": "1232"
+  }
+]
+
+###
+GET http://localhost:8080/api/stock/all-latest
+Authorization: Bearer {{jwt-token}}
+###
