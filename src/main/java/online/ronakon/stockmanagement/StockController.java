@@ -14,11 +14,11 @@ public class StockController {
     @Autowired
     StockService stockService;
 
-//    @GetMapping("/all-lastest")
-//    ResponseEntity<Object> getAllStockLastest() {
-//        var _temp = stockService.findAllLastest();
-//        return ResponseEntity.status(HttpStatus.OK).body(_temp);
-//    }
+    @GetMapping("/all-latest")
+    ResponseEntity<Object> getAllStockLastest() {
+        var _temp = stockService.findStockByCompanyCode("XX");
+        return ResponseEntity.status(HttpStatus.OK).body(_temp);
+    }
 
     @GetMapping("/stock-in-company/{id}")
     ResponseEntity<Object> getAllStockByCompany(@PathVariable("id") String company){
